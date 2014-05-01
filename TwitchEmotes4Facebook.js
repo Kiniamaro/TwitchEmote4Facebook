@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name        kappa
-// @namespace   TwtichEmotes4Facebook
-// @include     TwtichEmotes4Facebook
-// @version     1
-// @grant       none
+// @name         TwitchEmote4Facebook
+// @description  adds the Twitch emotes to the facebook chat
+// @homepage     https://github.com/Kiniamaro/TwitchEmote4Facebook
+// @version      0.1.0
+// @include      *.facebook.com/*
+// @grant        none
 // ==/UserScript==
-
 
 var emotes = []; //Todo
 
