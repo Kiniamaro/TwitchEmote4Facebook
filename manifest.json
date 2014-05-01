@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "TwitchEmote4Facebook",
+  "description": "adds the Twitch emotes to the facebook chat",
+  "homepage_url": "https://github.com/Kiniamaro/TwitchEmote4Facebook",
+  "version": "0.1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["TwitchEmotes4Facebook.user.js"]
+    }
+  ]
+}
