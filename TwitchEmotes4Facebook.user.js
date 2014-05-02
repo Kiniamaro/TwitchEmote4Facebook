@@ -3,8 +3,7 @@
 // @description adds the Twitch emotes to the facebook chat
 // @homepage https://github.com/Kiniamaro/TwitchEmote4Facebook
 // @version 0.1.0
-// @include https://www.facebook.com/*
-// @match https://raw.githubusercontent.com/Kiniamaro/TwitchEmote4Facebook/master/emotes.js
+// @match https://www.facebook.com/*
 // @grant none
 // ==/UserScript==
 
