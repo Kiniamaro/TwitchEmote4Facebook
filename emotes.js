@@ -19,7 +19,7 @@ var emotes = [
     
     {
         name: 'Kreygasm',
-        regex: /TriHard/g,
+        regex: /Kreygasm/g,
         image '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3a624954918104fe-19x27.png">'
     },
     
