@@ -1,13 +1,12 @@
 // ==UserScript==
-// @name         TwitchEmote4Facebook
-// @description  adds the Twitch emotes to the facebook chat
-// @homepage     https://github.com/Kiniamaro/TwitchEmote4Facebook
-// @version      0.1.0
-// @include      https://www.facebook.com/*
-// @grant        none
+// @name TwitchEmote4Facebook
+// @description adds the Twitch emotes to the facebook chat
+// @homepage https://github.com/Kiniamaro/TwitchEmote4Facebook
+// @version 0.1.0
+// @include https://www.facebook.com/*
+// @match https://raw.githubusercontent.com/Kiniamaro/TwitchEmote4Facebook/master/emotes.js
+// @grant none
 // ==/UserScript==
-
-var emotes = []; // TODO
 
 var observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mut) {
@@ -15,11 +14,8 @@ var observer = new MutationObserver(function (mutations) {
 
         for (var i = 0; i < msglist.length; i++) {
             var msg = msglist[i];
-            if (msg.textContent.match(/Kappa/)) {
-                msg.innerHTML = msg.innerHTML.replace(
-                    /Kappa/g,
-                    '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/' +
-                        'chansub-global-emoticon-ddc6e3a8732cb50f-25x28.png">');
+               console.log("went in");
+                textToEmote(msg);
             }
         }
     });
@@ -36,3 +32,14 @@ var readyStateChecker = setInterval(function () {
         clearInterval(readyStateChecker);
     }
 }, 100);
+
+function textToEmote(message) {
+    console.log(emotes[0].name);
+    for(var i = 0; i < emotes.length; i ++) {
+        if (message.textContent.match(emotes[i].regex)){
+            message.textContent = message.textContent.replace(
+               emotes[i].regex, emotes[i].image);
+        }
+    }
+}
+
