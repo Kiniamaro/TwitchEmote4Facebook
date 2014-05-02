@@ -14,9 +14,8 @@ var observer = new MutationObserver(function (mutations) {
 
         for (var i = 0; i < msglist.length; i++) {
             var msg = msglist[i];
-               console.log("went in");
-                textToEmote(msg);
-            }
+            console.log("went in");
+            textToEmote(msg);
         }
     });
 });
